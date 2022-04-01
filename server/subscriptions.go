@@ -101,7 +101,7 @@ var subscribers sync.Map
 
 func subscribersSize() uint64 {
 	var size uint64
-	subscribers.Range(func(_, _ interface{}) bool {
+	subscribers.Range(func(_, _ any) bool {
 		size++
 		return true
 	})

@@ -12,7 +12,8 @@ var FeedSubscription = &graphql.Field{
 	Type: objects.FeedType,
 	Args: map[string]*graphql.ArgumentConfig{
 		"to": {
-			Type: graphql.NewNonNull(graphql.Int),
+			Type:         graphql.Int,
+			DefaultValue: 10,
 		},
 	},
 	Resolve: func(p graphql.ResolveParams) (interface{}, error) {
